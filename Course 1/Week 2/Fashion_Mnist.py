@@ -3,7 +3,7 @@ import keras
 
 #Import a lis of images of clothing from fashion_mnist
 #The images are 28x28 and have already been greyscaled
-fashion_mnist = keras.datasets.fashion_mnist
+fashion_mnist = tf.keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
 #Normalizes the data
