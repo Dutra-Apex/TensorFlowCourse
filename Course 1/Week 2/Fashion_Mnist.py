@@ -26,3 +26,10 @@ model = keras.Sequential([
 #The 3rd layer outputs 10 neurons, as there are 10 different types of clothing
 #The softmax converts an array to a binary array where the biggest number is 1,
 #and the remaining numbers are 0
+
+#Compile and train the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy')
+model.fit(train_images, train_labels, epochs=10)
+
+#Evaluates the model
+model.evaluate(test_images, test_labels)
