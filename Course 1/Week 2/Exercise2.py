@@ -19,7 +19,7 @@ def train_mnist():
     (x_train, y_train),(x_test, y_test) = mnist.load_data(path=path)
     # YOUR CODE SHOULD START HERE
     x_train = x_train / 255.0
-    y_train = y_train / 255.0
+    x_test = x_test / 255.0
 
     # YOUR CODE SHOULD END HERE
     model = tf.keras.models.Sequential([
