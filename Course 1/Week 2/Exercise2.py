@@ -6,7 +6,7 @@ def train_mnist():
     # YOUR CODE SHOULD START HERE
     class myCallBack(tf.keras.callbacks.Callback):
         def on_epoch_end(self, epoch, logs={}):
-            if(float(logs.get('accuracy')) > 0.99):
+            if(logs.get('loss') < 0.01):
                 print("Reached 99% accuracy so cancelling training!")
                 self.model.stop_training = True
                 
