@@ -1,6 +1,14 @@
 import tensorflow as tf
 import keras
 
+#Class that implements the on_epoch_end function
+#If loss is less than 0.4, end training
+class myCallback(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs={}):
+        if(logs.get('loss')<0.4):
+            print("\nLoss is low, training stops")
+            self.model.stop_training = True
+
 mnist = tf.keras.datasets.fashion_mnist
 (training_images, training_labels), (test_images, test_labels) = mnist.load_data()
 
