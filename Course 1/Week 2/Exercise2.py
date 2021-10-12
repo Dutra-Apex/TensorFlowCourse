@@ -35,7 +35,7 @@ def train_mnist():
                   metrics=['accuracy'])
     
     # model fitting
-    history = model.fit(x_train, y_train, epochs = 15, callbacks=[callbacks]
+    history = model.fit(x_train, y_train, epochs = 2, callbacks=[callbacks]
     )
     # model fitting
     return history.epoch, history.history['acc'][-1]
