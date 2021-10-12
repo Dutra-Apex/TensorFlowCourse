@@ -8,6 +8,10 @@ class myCallback(tf.keras.callbacks.Callback):
         if(logs.get('loss')<0.4):
             print("\nLoss is low, training stops")
             self.model.stop_training = True
+            
+#Initiates class
+callbacks = myCallback()
+
 
 mnist = tf.keras.datasets.fashion_mnist
 (training_images, training_labels), (test_images, test_labels) = mnist.load_data()
@@ -22,4 +26,6 @@ model = tf.keras.models.Sequential([
 ])
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy')
-model.fit(training_images, training_labels, epochs = 5)
+
+#Adds extra callback parameter to fit function
+model.fit(training_images, training_labels, epochs = 5, callbacks=[callbacks])
