@@ -32,3 +32,5 @@ model = tf.keras.models.Sequential([
     #It's still possible to use foftmax with 2 neurons, but sigmoid is more efficient
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
+
+
