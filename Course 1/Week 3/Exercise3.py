@@ -14,6 +14,8 @@ def train_mnist_conv():
     
     # YOUR CODE ENDS HERE
 
+    
+    
     mnist = tf.keras.datasets.mnist
     (training_images, training_labels), (test_images, test_labels) = mnist.load_data(path=path)
     # YOUR CODE STARTS HERE
