@@ -14,8 +14,6 @@ def train_mnist_conv():
     
     # YOUR CODE ENDS HERE
 
-    
-    
     mnist = tf.keras.datasets.mnist
     (training_images, training_labels), (test_images, test_labels) = mnist.load_data(path=path)
     # YOUR CODE STARTS HERE
@@ -29,7 +27,6 @@ def train_mnist_conv():
     test_images = test_images.reshape(10000, 28, 28, 1)
     test_images = test_images / 255.0
     
-
     # YOUR CODE ENDS HERE
 
     model = tf.keras.models.Sequential([
