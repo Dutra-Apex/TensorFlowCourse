@@ -29,9 +29,6 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(512, activation='relu'),
 
     #The sigmoid function is great for binary classification, and only requires 1 neuron
-    #It's still possible to use foftmax with 2 neurons, but sigmoid is more efficient
+    #It's still possible to use softmax with 2 neurons, but sigmoid is more efficient
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
-
-
-
